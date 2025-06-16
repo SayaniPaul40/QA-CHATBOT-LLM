@@ -12,6 +12,9 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter #for splitting text into chunks
 from langchain_community.document_loaders import PyPDFLoader
 import os
+import sys
+import pysqlite3
+sys.modules["sqlite3"] = pysqlite3
 
 from dotenv import load_dotenv
 load_dotenv()
