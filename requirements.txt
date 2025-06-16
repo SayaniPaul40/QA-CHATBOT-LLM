@@ -9,9 +9,9 @@ faiss-cpu
 langchain_groq
 langchain_chroma
 datasets
-sentence-transformers==2.2.2
-torch==2.0.1
-chromadb==0.4.15
+sentence-transformers
+torch
+chromadb
 peft
 pysqlite3-binary
 python-dotenv
