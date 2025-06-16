@@ -1,4 +1,15 @@
 ## RAG Q&A Conversation With PDF Including Chat History
+import sys
+import os
+try:
+    import pysqlite3
+    sys.modules['sqlite3'] = pysqlite3
+except ImportError:
+    pass
+
+import streamlit as st
+from langchain.chains import create_history_aware_retriever, create_retrieval_chain
+# ... rest of your imports
 import streamlit as st
 from langchain.chains import create_history_aware_retriever, create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
@@ -12,10 +23,6 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter #for splitting text into chunks
 from langchain_community.document_loaders import PyPDFLoader
 import os
-import sys
-import pysqlite3
-sys.modules["sqlite3"] = pysqlite3
-
 from dotenv import load_dotenv
 load_dotenv()
 
