@@ -14,3 +14,4 @@ langchain_groq
 langchain_chroma
 peft
 datasets
+pysqlite3-binary
